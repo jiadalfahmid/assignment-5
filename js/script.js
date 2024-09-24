@@ -3,15 +3,12 @@ const donationBtn = document.getElementById("donation");
 const historyBtn = document.getElementById("historyBtn");
 const historyPage = document.getElementById("history");
 const cards = document.getElementById("cards");
-let donated1 = parseFloat(document.getElementById("donated1").innerText);
-let donated2 = parseFloat(document.getElementById("donated2").innerText);
-let donated3 = parseFloat(document.getElementById("donated3").innerText);
 const donateNoakhali = document.getElementById("donateNoakhali");
 const inputNoakhali = document.getElementById("inputNoakhali");
 const donateFeni = document.getElementById("donateFeni");
+const inputFeni = document.getElementById("inputFeni");
 const inputQuota = document.getElementById("inputQuota");
 const donateQuota = document.getElementById("donateQuota");
-const inputFeni = document.getElementById("inputFeni");
 const modal = document.getElementById("my_modal_6");
 
 function checkAmount(value) {
@@ -30,7 +27,7 @@ function debited(donationAmount) {
     return true;
   } else {
     alert("You have insufficient balance!");
-    return false;
+    return location.reload();
   }
 }
 
@@ -63,21 +60,32 @@ function donate(input, donated, title) {
     alert("Invalid Donation amount");
     return location.reload();
   }
-};
+}
 
 donateNoakhali.addEventListener("click", () =>
-  donate(inputNoakhali, document.getElementById('donated1'), document.getElementById("titleNoakhali").innerText)
+  donate(
+    inputNoakhali,
+    document.getElementById("donated1"),
+    document.getElementById("titleNoakhali").innerText
+  )
 );
 
 donateFeni.addEventListener("click", () =>
-  donate(inputFeni, document.getElementById('donated2'), document.getElementById("titleFeni").innerText)
+  donate(
+    inputFeni,
+    document.getElementById("donated2"),
+    document.getElementById("titleFeni").innerText
+  )
 );
 
 donateQuota.addEventListener("click", () =>
-  donate(inputQuota, document.getElementById('donated3'), document.getElementById("titleQuota").innerText)
+  donate(
+    inputQuota,
+    document.getElementById("donated3"),
+    document.getElementById("titleQuota").innerText
+  )
 );
 
-// donation
 donationBtn.addEventListener("click", function () {
   donationBtn.classList.remove(
     "border",
@@ -97,7 +105,6 @@ donationBtn.addEventListener("click", function () {
   cards.classList.remove("hidden");
 });
 
-// history
 historyBtn.addEventListener("click", function () {
   historyBtn.classList.remove(
     "border",

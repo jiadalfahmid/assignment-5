@@ -102,9 +102,42 @@
       </nav>
    </header>
    <main class="container pb-12 mx-auto lg:pb-20 h-svh">
-      
+      <section class="py-8">
+         <h1 class="text-3xl lg:text-5xl font-bold">Important FAQ</h1>
+         <div class="join join-vertical w-full py-8">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+              <div class="collapse-content">
+                <p>The DOM is a programming interface for web documents. It represents the structure of a document (like HTML) as a tree of objects, making it accessible and manipulable using programming languages like JavaScript.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+              <div class="collapse-content">
+                <p>To select an element from the DOM we generally use document.getElementById('') and document.querySelector('').</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+              <div class="collapse-content">
+                <p>Event delegation is a DOM technique that improves performance by attaching a single event listener to a parent element, rather than multiple listeners for each child. It works by using the event propagation model, where events bubble up through the DOM tree, allowing the parent to handle child events. This reduces memory usage and simplifies code, making it especially useful for managing many similar elements efficiently.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+              <div class="collapse-content">
+                <p>To manipulate an element's attributes we  can use setAttribute() and removeAttribute() methods. And to modify the style of an element by accessing the style property.
+                </p>
+              </div>
+            </div>
+          </div>
+      </section>
    </main>
-   <footer class="bg-background p-12"></footer>
+   <footer class="bg-background p-12 sticky bottom-0"></footer>
    <script src="./js/script.js"></script>
 </body>
 </html>
